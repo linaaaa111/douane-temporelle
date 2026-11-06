@@ -5,7 +5,8 @@ Enseignant : Nidhal Jelassi
 
 ## Membres du groupe
 - Lina TABOUBI
-- Wissal TON_NOM_DE_FAMILLE
+- Wissal Boulaaress
+- Yassine Cherif
 
 ## Description
 Application Android simulant un poste de douane pour voyageurs du temps.
