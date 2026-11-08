@@ -17,5 +17,5 @@ Elle contient 3 activités :
 
 ## Informations techniques
 - Langage : Java
-- Matricule utilisé pour les clés putExtra : XXXX
-- Initiales utilisées dans les IDs : XX
+- Matricule utilisé pour les clés putExtra : 9886
+- Initiales utilisées dans les IDs : wb
