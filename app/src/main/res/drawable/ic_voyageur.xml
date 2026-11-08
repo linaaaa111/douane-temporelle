@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="236dp"
+    android:height="236dp"
+    android:viewportWidth="236"
+    android:viewportHeight="236">
+
+    <!-- fond bleu roi -->
+    <path
+        android:fillColor="#2F4FCB"
+        android:pathData="M0,0h236v236h-236z" />
+
+    <!-- tête (cercle doré) -->
+    <path
+        android:fillColor="#F2C94C"
+        android:pathData="M118,112m-44,0a44,44 0,1 1,88 0a44,44 0,1 1,-88 0" />
+
+    <!-- corps (demi-ellipse dorée) -->
+    <path
+        android:fillColor="#F2C94C"
+        android:pathData="M40,236A78,73 0,0 1,196 236Z" />
+</vector>
