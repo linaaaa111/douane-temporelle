@@ -9,35 +9,49 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
-
 public class ResultActivity extends AppCompatActivity {
+
+    // Method bch na3mlou biha les clés b el matricule 9886
+    public static String getCle(String matricule, String suffixe) {
+        return matricule + "_" + suffixe;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
-        LinearLayout layoutNj = findViewById(R.id.layout_result_nj);
-        TextView tvMessageNj = findViewById(R.id.tv_message_nj);
-        Button btnNouveauNj = findViewById(R.id.btn_nouveau_nj);
+        // Esta3mna el matricule 9886
+        String matricule = "9886";
+        String cleNom = getCle(matricule, "NOM_VOYAGEUR");
+        String cleVerdict = getCle(matricule, "VERDICT_SAUT");
 
-        boolean approuve = getIntent().getBooleanExtra(KeyUtils.keyVerdict(), false);
-        String nom = getIntent().getStringExtra(KeyUtils.keyNom());
+        // Nkobtrou les données eli jew mel Intent (el éran eli 9balha)
+        String nomVoyageur = getIntent().getStringExtra(cleNom);
+        boolean estApprouve = getIntent().getBooleanExtra(cleVerdict, false);
 
-        if (approuve) {
-            layoutNj.setBackgroundColor(getColor(R.color.color_accepted));
-            tvMessageNj.setText("Bon voyage " + nom);
+        // Nrboto les éléments ta3 el interface mte3na (m3a el initiales f el layout)
+        LinearLayout layoutRoot = findViewById(R.id.layout_root_ya);
+        TextView tvMessage = findViewById(R.id.tv_message_ya);
+        Button btnNouveauVoyageur = findViewById(R.id.btn_nouveau_voyageur_ya);
+
+        // nbadlo couleur el background w el message selon el verdict (akhdhar ken mawafe9, ahmar ken mrffodh)
+        if (estApprouve) {
+            layoutRoot.setBackgroundColor(Color.parseColor("#4CAF50")); // Akhdhar (Approuvé)
+            tvMessage.setText("Bon voyage " + nomVoyageur);
         } else {
-            layoutNj.setBackgroundColor(getColor(R.color.color_refused));
-            tvMessageNj.setText(nom + " est en état d'arrestation temporelle");
+            layoutRoot.setBackgroundColor(Color.parseColor("#F44336")); // Ahmar (Refusé / Risque de paradoxe)
+            tvMessage.setText(nomVoyageur + " est en état d'arrestation temporelle");
         }
 
-        btnNouveauNj.setOnClickListener(new View.OnClickListener() {
+        // El bouton bch narjaa lel début w nsakro les activités eli f west el pile
+        btnNouveauVoyageur.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ResultActivity.this, MainActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
+                finish();
             }
         });
     }
