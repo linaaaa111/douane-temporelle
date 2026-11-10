@@ -13,9 +13,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText etNomNj, etNaissanceNj, etDestinationNj;
-    private Spinner spMotifNj;
-    private Button btnInspecterNj;
+    private EditText etNomwb, etNaissancewb, etDestinationwb;
+    private Spinner spMotifwb;
+    private Button btnInspecterwb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,21 +23,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Récupération des composants
-        etNomNj = findViewById(R.id.et_nom_nj);
-        etNaissanceNj = findViewById(R.id.et_naissance_nj);
-        etDestinationNj = findViewById(R.id.et_destination_nj);
-        spMotifNj = findViewById(R.id.sp_motif_nj);
-        btnInspecterNj = findViewById(R.id.btn_inspecter_nj);
+        etNomwb = findViewById(R.id.et_nom_wb);
+        etNaissancewb = findViewById(R.id.et_naissance_wb);
+        etDestinationwb = findViewById(R.id.et_destination_wb);
+        spMotifwb = findViewById(R.id.sp_motif_wb);
+        btnInspecterwb = findViewById(R.id.btn_inspecter_wb);
 
-        btnInspecterNj.setOnClickListener(new View.OnClickListener() {
+        btnInspecterwb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 // el saisie des données
-                String nom = etNomNj.getText().toString().trim();
-                String naissance = etNaissanceNj.getText().toString().trim();
-                String destination = etDestinationNj.getText().toString().trim();
-                String motif = spMotifNj.getSelectedItem().toString();
+                String nom = etNomwb.getText().toString().trim();
+                String naissance = etNaissancewb.getText().toString().trim();
+                String destination = etDestinationwb.getText().toString().trim();
+                String motif = spMotifwb.getSelectedItem().toString();
 
                 // nverifiw les champs meebin
                 if (nom.isEmpty() || naissance.isEmpty() || destination.isEmpty()) {

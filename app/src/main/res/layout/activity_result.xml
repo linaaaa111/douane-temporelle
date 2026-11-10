@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/layout_root_ya"
+    android:id="@+id/layout_root_wb"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -9,7 +9,7 @@
     android:background="#4CAF50">
 
     <TextView
-        android:id="@+id/tv_titre_resultat_ya"
+        android:id="@+id/tv_titre_resultat_wb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="VERDICT DU TEMPS"
@@ -19,7 +19,7 @@
         android:layout_marginBottom="32dp" />
 
     <TextView
-        android:id="@+id/tv_message_ya"
+        android:id="@+id/tv_message_wb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Message personnalisé"
@@ -29,7 +29,7 @@
         android:layout_marginBottom="48dp" />
 
     <Button
-        android:id="@+id/btn_nouveau_voyageur_ya"
+        android:id="@+id/btn_nouveau_voyageur_wb"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Nouveau voyageur"

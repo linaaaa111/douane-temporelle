@@ -17,22 +17,22 @@ public class ResultActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
-        LinearLayout layoutNj = findViewById(R.id.layout_result_nj);
-        TextView tvMessageNj = findViewById(R.id.tv_message_nj);
-        Button btnNouveauNj = findViewById(R.id.btn_nouveau_nj);
+        LinearLayout layoutwb = findViewById(R.id.layout_root_wb);
+        TextView tvMessagewb = findViewById(R.id.tv_message_wb);
+        Button btnNouveauwb = findViewById(R.id.btn_nouveau_voyageur_wb);
 
         boolean approuve = getIntent().getBooleanExtra(KeyUtils.keyVerdict(), false);
         String nom = getIntent().getStringExtra(KeyUtils.keyNom());
 
         if (approuve) {
-            layoutNj.setBackgroundColor(getColor(R.color.color_accepted));
-            tvMessageNj.setText("Bon voyage " + nom);
+            layoutwb.setBackgroundColor(getColor(R.color.color_accepted));
+            tvMessagewb.setText("Bon voyage " + nom);
         } else {
-            layoutNj.setBackgroundColor(getColor(R.color.color_refused));
-            tvMessageNj.setText(nom + " est en état d'arrestation temporelle");
+            layoutwb.setBackgroundColor(getColor(R.color.color_refused));
+            tvMessagewb.setText(nom + " est en état d'arrestation temporelle");
         }
 
-        btnNouveauNj.setOnClickListener(new View.OnClickListener() {
+        btnNouveauwb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ResultActivity.this, MainActivity.class);
