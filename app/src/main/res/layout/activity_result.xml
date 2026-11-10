@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:gravity="center"
     android:padding="24dp"
-    android:background="#4CAF50">
+    android:background="@color/color_accepted">
 
     <TextView
         android:id="@+id/tv_titre_resultat_ya"
@@ -15,16 +15,16 @@
         android:text="VERDICT DU TEMPS"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/color_text"
         android:layout_marginBottom="32dp" />
 
     <TextView
         android:id="@+id/tv_message_ya"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Message personnalisé"
+        android:text="Message"
         android:textSize="18sp"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/color_text"
         android:gravity="center"
         android:layout_marginBottom="48dp" />
 
@@ -33,7 +33,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Nouveau voyageur"
-        android:backgroundTint="#FFFFFF"
+        android:backgroundTint="@color/color_text"
         android:textColor="#000000" />
 
 </LinearLayout>
