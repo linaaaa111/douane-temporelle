@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
-git fetch origin
+
 
 public class ResultActivity extends AppCompatActivity {
 
@@ -25,10 +25,10 @@ public class ResultActivity extends AppCompatActivity {
         String nom = getIntent().getStringExtra(KeyUtils.keyNom());
 
         if (approuve) {
-            layoutNj.setBackgroundColor(Color.parseColor("#2E7D32"));
+            layoutNj.setBackgroundColor(getColor(R.color.color_accepted));
             tvMessageNj.setText("Bon voyage " + nom);
         } else {
-            layoutNj.setBackgroundColor(Color.parseColor("#C62828"));
+            layoutNj.setBackgroundColor(getColor(R.color.color_refused));
             tvMessageNj.setText(nom + " est en état d'arrestation temporelle");
         }
 
