@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="1"
+    android:background="#F5E9C8">
+
+    <ImageView
+        android:id="@+id/iv_photo_wb"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.3"
+        android:padding="8dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_voyageur" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.7"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tv_entete_wb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PASSEPORT TEMPOREL"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_nom_wb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_entete_wb"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/tv_age_wb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_nom_wb"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/tv_motif_wb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_age_wb"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/btn_refuser_wb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="Refuser (Risque de paradoxe)" />
+
+        <Button
+            android:id="@+id/btn_approuver_wb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/btn_refuser_wb"
+            android:text="Approuver le saut temporel" />
+    </RelativeLayout>
+</LinearLayout>
