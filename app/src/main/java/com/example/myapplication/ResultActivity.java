@@ -11,7 +11,7 @@ import androidx.core.content.ContextCompat;
 
 public class ResultActivity extends AppCompatActivity {
 
-    // Method bch na3mlou biha les clés b el matricule 9886
+    // Fonction bch na3mlou biha les clés b el matricule 9886
     public static String getCle(String matricule, String suffixe) {
         return matricule + "_" + suffixe;
     }
@@ -21,21 +21,21 @@ public class ResultActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
-        // Matricule exigé
+        // El matricule mte3na
         String matricule = "9886";
         String cleNom = getCle(matricule, "NOM_VOYAGEUR");
         String cleVerdict = getCle(matricule, "VERDICT_SAUT");
 
-        // Nkobtrou les données eli jew mel Intent
+        // Nrecupériw les données eli jew mel Intent mel activité elli kbalha
         String nomVoyageur = getIntent().getStringExtra(cleNom);
         boolean estApprouve = getIntent().getBooleanExtra(cleVerdict, false);
 
-        // Nrboto les éléments ta3 el interface mte3na (b les initiales _ya)
+        // Nrboto les éléments ta3 el interface (b les initiales _ya)
         LinearLayout layoutRoot = findViewById(R.id.layout_root_ya);
         TextView tvMessage = findViewById(R.id.tv_message_ya);
         Button btnNouveauVoyageur = findViewById(R.id.btn_nouveau_voyageur_ya);
 
-        // nbadlo couleur el background w el message b les ressources XML mte3na
+        // Nbadlo couleur el background w el message selon el verdict (accepted wela refused)
         if (estApprouve) {
             layoutRoot.setBackgroundColor(ContextCompat.getColor(this, R.color.color_accepted));
             tvMessage.setText("Bon voyage " + nomVoyageur);
@@ -44,10 +44,10 @@ public class ResultActivity extends AppCompatActivity {
             tvMessage.setText(nomVoyageur + " est en état d'arrestation temporelle");
         }
 
-        // Application de la couleur du texte vintage
+        // Nhotou couleur el texte el mouwada7a (vintage)
         tvMessage.setTextColor(ContextCompat.getColor(this, R.color.color_text));
 
-        // El bouton bch narjaa lel début w nsakro les activités eli f west el pile
+        // El bouton bch narjaa lel début (MainActivity) w nsakro el pile mte3 el activités lkol
         btnNouveauVoyageur.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

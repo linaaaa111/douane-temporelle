@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:gravity="center"
     android:padding="24dp"
-    android:background="@color/color_accepted">
+    android:background="@color/color_background_dark_blue">
 
     <TextView
         android:id="@+id/tv_titre_resultat_ya"
