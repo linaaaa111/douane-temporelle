@@ -11,7 +11,7 @@ public class KeyUtils {
         return matricule + "_" + nomCle;
     }
 
-    // Clés prédéfinies
+    // Clés predefinies
     public static String keyNom() {
         return buildKey(MATRICULE, "NOM_VOYAGEUR");
     }

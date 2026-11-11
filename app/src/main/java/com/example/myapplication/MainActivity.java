@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Récupération des composants
+        // Recuperation des composants
         etNomwb = findViewById(R.id.et_nom_wb);
         etNaissancewb = findViewById(R.id.et_naissance_wb);
         etDestinationwb = findViewById(R.id.et_destination_wb);
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                // el saisie des données
+                // el saisie des donnees
                 String nom = etNomwb.getText().toString().trim();
                 String naissance = etNaissancewb.getText().toString().trim();
                 String destination = etDestinationwb.getText().toString().trim();
