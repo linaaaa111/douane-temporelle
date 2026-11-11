@@ -1,7 +1,11 @@
+
 <resources>
+    <!-- Couleurs du projet Douane Temporelle -->
     <color name="color_accepted">#2E7D32</color>
     <color name="color_refused">#C62828</color>
     <color name="color_text">#F5E9C8</color>
+
+    <!-- Couleurs par le thème Android -->
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>

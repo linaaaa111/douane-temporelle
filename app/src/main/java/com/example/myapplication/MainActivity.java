@@ -59,6 +59,12 @@ public class MainActivity extends AppCompatActivity {
                             Toast.LENGTH_SHORT).show();
                     return;
                 }
+                //ken el date de naissance asghr men anne taa l voyage tji alert
+                if (anneeDestination < anneeNaissance) {
+                    Toast.makeText(MainActivity.this,
+                            "Attention ! Vous voyagez avant votre naissance.",
+                            Toast.LENGTH_LONG).show();
+                }
 
                 Intent intent = new Intent(MainActivity.this,
                         VerificationActivity.class);
