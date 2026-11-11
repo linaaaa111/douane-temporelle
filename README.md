@@ -4,9 +4,9 @@ Mini-projet (DS 1) - Programmation Mobile - 3ème BI - FSEGT
 Enseignant : Nidhal Jelassi
 
 ## Membres du groupe
-- Lina TABOUBI
-- Wissal Boulaaress
-- Yassine Cherif
+- Lina TABOUBI A03
+- Wissal Boulaaress A07
+- Yassine Cherif A07
 
 ## Description
 Application Android simulant un poste de douane pour voyageurs du temps.
